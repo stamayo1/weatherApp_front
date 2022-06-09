@@ -1,0 +1,9 @@
+.search {
+    margin-top: 1.5rem;
+}
+
+.search .search__input{
+    font-size: 1rem;
+    padding: 0.5rem;
+    width: 100%
+}

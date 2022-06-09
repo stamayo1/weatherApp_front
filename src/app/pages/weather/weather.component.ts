@@ -12,4 +12,7 @@ export class WeatherComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  onSearch(search: string){
+    console.log(search);
+  }
 }
