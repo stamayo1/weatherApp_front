@@ -1,3 +1,69 @@
-<div class="container col-12 col-md-8 col-lg-6">        
-    <p>card works!</p>
+<div class="card-container">        
+    <div class="upper-data">
+        <img [src]="url" alt="weather">
+
+        <div class="location">
+            {{data?.name | titlecase }}, {{data?.sys?.country | uppercase }}
+        </div>
+
+        <div class="weather-data">
+            <div class="temperature">
+                {{data?.main?.temp | number: '1.0-0' }}° C
+            </div>
+            <div class="feel">
+                Sensación termica: {{data?.main?.feels_like  | number: '1.0-0'  }}° C
+            </div>
+        </div>
+    </div>
+    <div class="lower-data">
+        <div class="more-info-label">
+            Información adicional
+        </div>
+        <div class="more-info-container">
+            <div class="info-block">
+                <div class="info-block-label">
+                    <img src="../../../assets/svg/temperature-arrow-down-solid.svg" alt="">
+                    <span>min</span>
+                </div>
+
+                <div class="info-block-value">
+                    {{data?.main?.temp_min  | number: '1.0-0' }}° C
+                </div>
+            </div>
+
+            <div class="info-block">
+                <div class="info-block-label">
+                    <img src="../../../assets/svg/temperature-arrow-up-solid.svg" alt="">
+                    <span>max</span>
+                </div>
+
+                <div class="info-block-value">
+                    {{data?.main?.temp_max  | number: '1.0-0' }}° C
+                </div>
+            </div>
+
+            <div class="info-block">
+                <div class="info-block-label">
+                    <img src="../../../assets/svg/droplet-solid.svg" alt="">
+                    <span>humedad</span>
+                </div>
+
+                <div class="info-block-value">
+                    {{data?.main?.humidity | percent}}
+                </div>
+            </div>
+
+            <div class="info-block">
+                <div class="info-block-label">
+                    <img src="../../../assets/svg/wind-solid.svg" alt="">
+                    <span>velocidad</span>
+                </div>
+
+                <div class="info-block-value">
+                    {{data?.wind?.speed }} km/h
+                </div>
+            </div>
+
+        </div>
+    </div>
 </div>

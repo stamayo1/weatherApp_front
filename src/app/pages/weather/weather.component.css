@@ -3,7 +3,7 @@
 
 nav.nav {
     padding: 0.75rem 0.50rem;
-    background-color: var(--blue);
+    background-color: #4E7D96;
 }
 
 .title{
@@ -17,3 +17,7 @@ a{
     text-decoration: none;
 }
 
+p{
+    text-align: center;
+    font-size: 1.6rem;
+}

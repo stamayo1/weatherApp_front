@@ -23,14 +23,14 @@ export class SearchComponent implements OnInit {
     /**
      * Detectar los cambios que ocurran en el input, teniendo en cuenta
      * 1. Que haya un valor en el input
-     * 2. Hay una espera de .6ms para enviar el contenido del input
+     * 2. Hay una espera de .7s para enviar el contenido del input
      */
 
     this.inputSearch.valueChanges
     .pipe(
 
       map((search: string) => search.trim()), //Elimina los espacios en blanco  de los extremos
-      debounceTime(600),  // Espera .6s para emitir el valor actual
+      debounceTime(700),  // Espera .7s para emitir el valor actual
       filter((search: string) => search !== '')
     )
     .subscribe((search) =>{

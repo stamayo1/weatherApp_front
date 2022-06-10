@@ -5,4 +5,6 @@
     --dark-blue: #16056B; 
     --dark-gray: #AAAAAA; 
     --white: #ffff;
+    --shadow-dark: rgba(0,0,0,0.3);
+    --shadow-light: rgba(255,255,255,0.1);
 }

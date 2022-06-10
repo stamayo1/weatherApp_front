@@ -1,14 +1,24 @@
 <nav class="nav">
     <div class="nav__menu">
-        <a class="title" href="">Weather App</a>
+        <a class="title" >El TIEMPO</a>
     </div>
 </nav>
-<div class="container">
-    <div>
-        <app-search (submitted)="onSearch($event)"></app-search>
+<div class="container col-12 col-md-8 col-lg-4">
+    <app-search (submitted)="onSearch($event)"></app-search>
+
+    <app-card
+        *ngIf="!error && !loading"
+        [weather]="currentWeather"
+    ></app-card>
+
+    <div *ngIf="loading">
+        <img src="../../../assets/img/bubble-loading.gif" alt="">
+        <p>Cargando...</p>
     </div>
-    <div>
-        <app-card></app-card>
+
+    <div *ngIf="error">
+        <img src="../../../assets/img/bubble-empty.png" height="70%" width="100%" alt="">
+        <p>{{message}}</p>
     </div>
 </div>
 
