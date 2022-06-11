@@ -2,6 +2,8 @@
 
 Tiene como finalidad poder consultar el clima actual de la ciudad requerida. 
 
+![WEB](src/assets/evidencia/cap.png)
+
 ## Ejecución local
 
 Correr `ng serve`. Navegar a la ruta  `http://localhost:4200/` esto cargará la pantalla inicial.
@@ -30,3 +32,4 @@ Para usar el servicio es necesario contar con:
 ### Geolocalización 
 
 Se implementó un servicio  de geolocalización que le solicita al usuario acceso a este, para realizar una busqueda inicial del clima teniendo en cuenta la ciudad donde se cuentra el usuario. 
+
