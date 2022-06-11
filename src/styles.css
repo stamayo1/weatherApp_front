@@ -12,4 +12,103 @@ html{
     font-size: 16px;
 }
 
-  
+.wrap-login100 {
+    width: 95%;
+    background: transparent;
+}
+
+.container-login100 {
+    width: 100%;
+    min-height: 89vh;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    position: relative;
+    z-index: 1;
+}
+
+.container-login100-form-btn {
+    width: 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.login100-form {
+    width: 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.login100-form-title {
+    font-family: Montserrat-ExtraBold;
+    font-size: 24px;
+    color: #fff;
+    line-height: 1.2;
+    text-align: center;
+
+    width: 100%;
+    display: block;
+}
+
+/*---------------------------------------------*/
+.login100-form-avatar {
+    width: 160px;
+    height: auto;
+    overflow: hidden;
+    margin: 0 auto;
+}
+.login100-form-avatar img {
+    width: 100%;
+}
+
+.login100-form-btn {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #FFF;
+  width: 350px;
+  height: 50px;
+  border-radius: 25px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 25px;
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s;
+  background: #6194af;
+
+  position: relative;
+  z-index: 1;
+}
+
+
+.login100-form-btn a,
+.orange a {
+  width: 100%;
+  color: white;
+}

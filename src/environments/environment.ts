@@ -4,6 +4,7 @@
 
 export const environment = {
   production: false, 
+  url_auth: "http://localhost:44366",
   weather: {
     apiKey: "a02f512f14c42341eab84729ef331bc2", 
     api:"https://api.openweathermap.org/data/2.5/weather"

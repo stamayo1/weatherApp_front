@@ -1,0 +1,55 @@
+<app-nav></app-nav>
+
+<div *ngIf="!error">
+    <div class="limiter">
+        <div class="container-login100">
+            <div class="wrap-login100 p-t-190 p-b-30" style="padding-top: 0px;">
+                <form class="login100-form validate-form" [formGroup]="form" (ngSubmit)="signIn($event)">
+                    <div class="login100-form-avatar" style="margin-bottom: 40px;"> 
+                        <img src="./../../../assets/svg/init.svg" alt="AVATAR">
+                     
+                    </div>
+                    <div class="col-12" style="margin-bottom: 15px;">
+                        <div class="group-input">
+                            <input formControlName="users_email" type="email" name="email" required>
+                            <span class="highlight"></span>
+                            <span class="bar"></span>
+                            <label><i class="fa fa-user"></i>&nbsp; Correo electrónico</label>
+                        </div>
+                        <div class="space" *ngIf="hasEmailErrorAndDirty">
+                            <p class="required" *ngIf="form.get('email')?.hasError('required')">* Este campo es obligatorio</p>
+                            <p class="required" *ngIf="form.get('email')?.hasError('pattern')">* Formato de correo inválido</p>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="group-input">
+                            <input formControlName="users_password" type="number" minlength="8" maxlength="10" required style="-webkit-text-security:disc" >
+                            <span class="highlight"></span>
+                            <span class="bar"></span>
+                            <label><i class="fa fa-lock"></i>&nbsp; Contraseña</label>
+                        </div>
+                        <div class="space" *ngIf="hasPasswordErrorAndDirty">
+                            <p class="required" *ngIf="form.get('password')?.hasError('required')">* Este campo es obligatorio</p>
+                        </div>
+                    </div>
+                    <div class="container-login100-form-btn p-t-20">
+                        <button [disabled]="form.invalid" class="login100-form-btn">
+                            Iniciar sesión
+                        </button>
+                    </div>
+                    <div class="text-center bottom">
+                        <a class="txt1" routerLink="/signup">
+                            Registrate 					
+                        </a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<app-error
+    *ngIf="error"
+    [message]="message_info"
+    (retry)="onRetry()"
+></app-error>
