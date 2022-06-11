@@ -9,13 +9,15 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SearchComponent } from './components/search/search.component';
 import { WeatherComponent } from './pages/weather/weather.component';
 import { CardComponent } from './components/card/card.component';
+import { NavComponent } from './components/nav/nav.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SearchComponent,
     WeatherComponent,
-    CardComponent
+    CardComponent,
+    NavComponent
   ],
   imports: [
     BrowserModule,

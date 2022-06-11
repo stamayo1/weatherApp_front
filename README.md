@@ -1,27 +1,32 @@
 # WeatherApp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.1.
+Tiene como finalidad poder consultar el clima actual de la ciudad requerida. 
 
-## Development server
+## Ejecución local
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Correr `ng serve`. Navegar a la ruta  `http://localhost:4200/` esto cargará la pantalla inicial.
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Integraciones y Servicios
 
-## Build
+### .Net: API de auth
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Mediante un api creada en .NET, se realiza el servicio de autenticación y registro de usuario, además de guardar en base de datos el historial de consultas realizadas. 
 
-## Running unit tests
+Las 3 url disponibles de la API:
+* `http://localhost:4200/api/login`
+* `http://localhost:4200/api/registerclimate`
+* `http://localhost:4200/api/user`
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### OpenWeather: API del clima 
 
-## Running end-to-end tests
+Se utilizó el servicio gratuito de [OpenWeather](https://openweathermap.org/current) que permite consultar el clima actual de alguna de las ciudades de los 84 paises registrados en la platafotma
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Para usar el servicio es necesario contar con: 
+* URL de consulta  
+* Un api keY
 
-## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+### Geolocalización 
+
+Se implementó un servicio  de geolocalización que le solicita al usuario acceso a este, para realizar una busqueda inicial del clima teniendo en cuenta la ciudad donde se cuentra el usuario. 

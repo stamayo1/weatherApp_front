@@ -1,3 +1,8 @@
-<div class="search">
-    <input [formControl]="inputSearch" type="text" class="search__input" placeholder="Ex. Cali"/>
-</div>    
+<div class="col-12" style="margin-top: 30px;">
+    <div class="group-input">
+        <input type="string" [formControl]="inputSearch" onkeydown="return /[a-zA-ZñÑá-úÁ-Ú ]/i.test(event.key)" required>
+        <span class="highlight"></span>
+        <span class="bar"></span>
+        <label>Busquedar ciudad</label>
+    </div>
+</div>

@@ -1,0 +1,27 @@
+nav.nav {
+    padding: 0.7rem 0.8rem;
+    background-color: #4E7D96;
+}
+
+.nav__menu{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.nav__menu img{
+    height: 40px;
+}
+
+.title{
+    color:#ffff;
+    font-weight: 400;
+    line-height: 1.25rem;
+    font-size: 1.2rem;
+}
+
+a{  
+    padding-left: 10px;
+    text-decoration: none;
+}
+
