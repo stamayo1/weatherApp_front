@@ -20,6 +20,7 @@ Url disponibles:
 * **Core**: contiene los modelos(interfaces), services, y el guardian
 * **Componentes**: piezas de codigo reutilizable que serán utilizadas por otros componentes para complementar la interfaz 
 * **Pages**: todos aquellos componentes que estan ligados a una URl, y son los encargados  de renderear las pienzas principales y otros componentes. 
+* **Enviroments**: en la ruta src/enviroments/enviroments.ts, podra ver las variables de entorno utilizadas.
 
 ## Integraciones y Servicios
 
